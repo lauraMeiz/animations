@@ -1,0 +1,80 @@
+.clock {
+  border-radius: 50%;
+  border: 1px solid black;
+  background: #fff url(../../img/ios_clock.svg) no-repeat center;
+  background-size: 400px;
+  height: 15em;
+  padding-bottom: 200px;
+  position: relative;
+  width: 30em;
+}
+
+.clock:after {
+  background: #000;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5%;
+  height: 5%;
+  z-index: 1;
+}
+
+.minutes-container,
+.hours-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hours {
+  background: #000;
+  height: 80px;
+  left: 235px;
+  position: absolute;
+  top: 140px;
+  transform-origin: 50% 100%;
+  width: 10px;
+  animation-name: tiktak;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes tiktak {
+  0% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.minutes {
+  background: #000;
+  height: 40%;
+  left: 49%;
+  position: absolute;
+  top: 10%;
+  transform-origin: 50% 100%;
+  width: 2%;
+  animation-name: tiktak;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+/*
+.hours-container {
+  animation: rotate 43200s infinite linear;
+}
+.minutes-container {
+  animation: rotate 3600s infinite linear;
+}
+
+.minutes-container {
+  animation: rotate 3600s infinite steps(60);
+}
+*/

@@ -1,0 +1,9 @@
+@import "../components/clock.css";
+@import "../components/batterie.css";
+.title {
+  width: 400px;
+  padding: 60px;
+  margin-left: 20px;
+  color: black;
+  font-size: 40px;
+}
