@@ -42,6 +42,7 @@
   animation-name: tiktak;
   animation-duration: 60s;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 @keyframes tiktak {
@@ -64,6 +65,7 @@
   animation-name: tiktak;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 /*
