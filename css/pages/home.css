@@ -1,5 +1,6 @@
 @import "../components/clock.css";
 @import "../components/batterie.css";
+@import "../components/time.css";
 .title {
   width: 400px;
   padding: 60px;

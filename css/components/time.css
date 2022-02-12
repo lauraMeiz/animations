@@ -1,0 +1,21 @@
+.time {
+  width: 300px;
+  display: flex;
+  background-image: url(../../img/R.jpg);
+  flex-direction: row;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 40%;
+  border: 5px solid blue;
+}
