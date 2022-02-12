@@ -73,7 +73,7 @@
   border-left: 5px solid black;
   height: 100%;
   animation-name: one;
-  animation-duration: 4s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   display: inline-block;
   float: left;
@@ -96,8 +96,9 @@
   display: inline-block;
   float: left;
   animation-name: second;
-  animation-duration: 4s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
+  delay: 8s;
 }
 @keyframes second {
   0% {
@@ -117,7 +118,8 @@
   float: left;
   animation-name: third;
   animation-iteration-count: infinite;
-  animation-duration: 4s;
+  animation-duration: 10s;
+  delay: 7s;
 }
 @keyframes third {
   0% {
@@ -138,7 +140,8 @@
   float: left;
   animation-name: four;
   animation-iteration-count: infinite;
-  animation-duration: 4s;
+  animation-duration: 10s;
+  delay: 9s;
 }
 @keyframes four {
   0% {

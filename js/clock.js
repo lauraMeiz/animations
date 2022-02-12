@@ -1,33 +1,33 @@
-function initLocalClocks() {
+/*function initLocalClocks() {
   // Get the local time using JS
-  var date = new Date();
-  var seconds = date.getSeconds();
-  var minutes = date.getMinutes();
-  var hours = date.getHours();
+  let date = new Date();
+  let secondsT = date.getSeconds();
+  let minutesT = date.getMinutes();
+  let hoursT = date.getHours();
 
   // Create an object with each hand and it's angle in degrees
-  var hands = [
+  let hands = [
     {
-      hand: "hours",
-      angle: hours * 30 + minutes / 2,
+      hand: "hoursT",
+      angle: hoursT * 30 + minutesT / 2,
     },
     {
-      hand: "minutes",
-      angle: minutes * 6,
+      hand: "minutesT",
+      angle: minutesT * 6,
     },
     {
-      hand: "seconds",
-      angle: seconds * 6,
+      hand: "secondsT",
+      angle: secondsT * 6,
     },
   ];
   // Loop through each of these hands to set their angle
-  for (var j = 0; j < hands.length; j++) {
-    var elements = document.querySelectorAll("." + hands[j].hand);
-    for (var k = 0; k < elements.length; k++) {
+  for (let j = 0; j < hands.length; j++) {
+    let elements = document.querySelectorAll("." + hands[j].hand);
+    for (let k = 0; k < elements.length; k++) {
       elements[k].style.webkitTransform = "rotateZ(" + hands[j].angle + "deg)";
       elements[k].style.transform = "rotateZ(" + hands[j].angle + "deg)";
       // If this is a minute hand, note the seconds position (to calculate minute position later)
-      if (hands[j].hand === "minutes") {
+      if (hands[j].hand === "minutesT") {
         elements[k].parentNode.setAttribute(
           "data-second-angle",
           hands[j + 1].angle
@@ -36,3 +36,18 @@ function initLocalClocks() {
     }
   }
 }
+*/
+
+const min = document.querySelector(".minutesT");
+const sec = document.querySelector(".secondsT");
+const hour = document.querySelector(".hoursT");
+setInterval(() => {
+  const date = new Date();
+  const secDeg = (date.getSeconds() / 60) * 360 - 90;
+  const minDeg = (date.getMinutes() / 60) * 360 - 90;
+  const hourDeg = (date.getHours() / 60) * 360 - 90;
+  sec.style.transform = `rotate(${secDeg}deg)`;
+  min.style.transform = `rotate(${minDeg}deg)`;
+  hour.style.transform = `rotate(${hourDeg}deg)`;
+  console.log();
+}, 1000);
